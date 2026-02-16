@@ -37,7 +37,6 @@ DirectorioEmpleadosAPI/
 ```
 
 ## Requisitos Previos
-
 - Python 3.x
 - Docker y Docker Compose (opcional, para despliegue containerizado)
 - pip (gestor de paquetes de Python)
@@ -87,7 +86,7 @@ cd DirectorioEmpleadosAPI
 docker-compose up -d
 ```
 
-La API estará disponible en `http://localhost:5000` (o el puerto configurado).
+La API estará disponible en `http://localhost:8000` (o el puerto configurado).
 
 ## Uso de la API
 
@@ -132,26 +131,6 @@ Content-Type: application/json
 #### Eliminar un empleado
 ```http
 DELETE /empleados/{id}
-```
-
-### Ejemplos de Uso con cURL
-
-```bash
-# Listar todos los empleados
-curl -X GET http://localhost:5000/empleados
-
-# Crear un nuevo empleado
-curl -X POST http://localhost:5000/empleados \
-  -H "Content-Type: application/json" \
-  -d '{"nombre":"María García","email":"maria@empresa.com","departamento":"RRHH","puesto":"Manager"}'
-
-# Actualizar un empleado
-curl -X PUT http://localhost:5000/empleados/1 \
-  -H "Content-Type: application/json" \
-  -d '{"nombre":"María García","puesto":"Senior Manager"}'
-
-# Eliminar un empleado
-curl -X DELETE http://localhost:5000/empleados/1
 ```
 
 ## Docker
@@ -206,11 +185,11 @@ PORT=5000
 | puesto | String | Cargo o puesto |
 | fecha_ingreso | DateTime | Fecha de ingreso a la empresa |
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-## 👤 Autor
+## Autor
 
 **claun0ch3**
 
